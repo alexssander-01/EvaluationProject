@@ -1,11 +1,20 @@
 package com.br.alexssander.evaluationproject.model;
+import lombok.Data;
 
+import javax.persistence.*;
 import java.util.Date;
 
+@Entity
+@Table(name = "client")
 public class Client {
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Integer idCliente;
+    @Column(name = "namecliente")
     private String nameCliente;
+    @Column(name = "emailcliente")
     private String emailCliente;
+    @Column(name = "birthdatecliente",nullable = false)
     private Date birthDateCliente;
 
     public Integer getIdCliente() {
