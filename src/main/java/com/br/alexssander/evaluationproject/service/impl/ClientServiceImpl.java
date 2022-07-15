@@ -1,6 +1,5 @@
 package com.br.alexssander.evaluationproject.service.impl;
 
-import com.br.alexssander.evaluationproject.controller.ClientController;
 import com.br.alexssander.evaluationproject.exception.ResourceNotFoundException;
 import com.br.alexssander.evaluationproject.model.Client;
 import com.br.alexssander.evaluationproject.repository.ClientRepository;
@@ -8,7 +7,6 @@ import com.br.alexssander.evaluationproject.service.ClientService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class ClientServiceImpl implements ClientService {
@@ -54,8 +52,7 @@ public class ClientServiceImpl implements ClientService {
 
     @Override
     public void deleteClient(Integer id) {
-        Client client = clientRepository.findById(id).orElseThrow(()-> new ResourceNotFoundException("Client","Id",id));
-
+        clientRepository.findById(id).orElseThrow(()-> new ResourceNotFoundException("Client","Id",id));
         clientRepository.deleteById(id);
     }
 }
