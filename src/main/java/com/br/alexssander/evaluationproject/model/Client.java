@@ -1,51 +1,56 @@
 package com.br.alexssander.evaluationproject.model;
-import lombok.Data;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.time.LocalDate;
 
 @Entity
-@Table(name = "client")
+@Table(name = "client", schema = "public")
 public class Client {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private Integer idCliente;
-    @Column(name = "namecliente")
-    private String nameCliente;
-    @Column(name = "emailcliente")
-    private String emailCliente;
-    @Column(name = "birthdatecliente",nullable = false)
-    private Date birthDateCliente;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "idclient")
+    private Integer idClient;
+    @Column(name = "nameclient", nullable = false)
+    @JsonFormat(shape = JsonFormat.Shape.STRING)
+    private String nameClient;
+    @Column(name = "emailclient", nullable = false)
+    @JsonFormat(shape = JsonFormat.Shape.STRING)
+    private String emailClient;
+    @Column(name = "birthdatecliente")
+    @JsonFormat(pattern = "dd-MM-yyyy")
+    private LocalDate birthDateClient;
 
     public Integer getIdCliente() {
-        return idCliente;
+        return idClient;
     }
 
     public void setIdCliente(Integer idCliente) {
-        this.idCliente = idCliente;
+        this.idClient = idCliente;
     }
 
     public String getNameCliente() {
-        return nameCliente;
+        return nameClient;
     }
 
     public void setNameCliente(String nameCliente) {
-        this.nameCliente = nameCliente;
+        this.nameClient = nameCliente;
     }
 
     public String getEmailCliente() {
-        return emailCliente;
+        return emailClient;
     }
 
     public void setEmailCliente(String emailCliente) {
-        this.emailCliente = emailCliente;
+        this.emailClient = emailCliente;
     }
 
-    public Date getBirthDateCliente() {
-        return birthDateCliente;
+    public LocalDate getBirthDateCliente() {
+        return birthDateClient;
     }
 
-    public void setBirthDateCliente(Date birthDateCliente) {
-        this.birthDateCliente = birthDateCliente;
+    public void setBirthDateCliente(LocalDate birthDateCliente) {
+        this.birthDateClient = birthDateCliente;
     }
+
 }

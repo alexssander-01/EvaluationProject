@@ -1,8 +1,8 @@
 CREATE TABLE public.client
 (
     idclient serial NOT NULL,
-    nameclient text NOT NULL,
-    emailclient text NOT NULL,
+    nameclient varchar(100) NOT NULL,
+    emailclient varchar(100) NOT NULL,
     birthdatecliente date,
     PRIMARY KEY (idclient)
 );
@@ -11,8 +11,8 @@ ALTER TABLE IF EXISTS public.client
 CREATE TABLE public.product
 (
     idproduct serial NOT NULL,
-    nameproduct text NOT NULL,
-    descriptproduct text,
+    nameproduct varchar(40) NOT NULL,
+    descriptproduct varchar(200),
     priceproduct double precision NOT NULL,
     PRIMARY KEY (idproduct)
 );
