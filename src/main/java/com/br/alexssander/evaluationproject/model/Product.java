@@ -1,5 +1,4 @@
 package com.br.alexssander.evaluationproject.model;
-
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import javax.persistence.*;
