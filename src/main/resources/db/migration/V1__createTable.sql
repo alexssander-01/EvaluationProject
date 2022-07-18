@@ -27,12 +27,14 @@ CREATE TABLE public.sale
 );
 ALTER TABLE IF EXISTS public.sale
     OWNER to postgres;
-CREATE TABLE public.productsale
+CREATE TABLE public.itenssale
 (
-    idproductsale serial NOT NULL,
+    iditensale serial NOT NULL,
     idproduct integer NOT NULL,
     idsale integer NOT NULL,
-    PRIMARY KEY (idproductsale),
+    PRIMARY KEY (iditensale),
     CONSTRAINT fk_product FOREIGN KEY (idproduct) references Product(idproduct),
     CONSTRAINT fk_sale FOREIGN KEY (idsale) references Sale(idsale)
-)
+);
+ALTER TABLE IF EXISTS public.itenssale
+    OWNER TO postgres;
