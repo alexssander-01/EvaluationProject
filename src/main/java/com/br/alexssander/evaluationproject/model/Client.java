@@ -52,5 +52,13 @@ public class Client {
     public void setBirthDateCliente(LocalDate birthDateCliente) {
         this.birthDateClient = birthDateCliente;
     }
-
+    @Override
+    public String toString() {
+        return "Client{" +
+                "idClient=" + idClient +
+                ", nameClient='" + nameClient + '\'' +
+                ", emailClient='" + emailClient + '\'' +
+                ", birthDateClient=" + birthDateClient +
+                '}';
+    }
 }

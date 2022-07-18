@@ -50,4 +50,5 @@ public class Product {
     public void setPriceProduct(Double priceProduct) {
         this.priceProduct = priceProduct;
     }
+
 }
