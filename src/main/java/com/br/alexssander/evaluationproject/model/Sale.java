@@ -18,7 +18,6 @@ public class Sale {
     @ManyToOne(fetch = FetchType.LAZY,optional = false)
     @JoinColumn(name = "idclient",nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
-    @JsonIgnore
     private Client clientSale;
     @ManyToMany(fetch = FetchType.LAZY,
         cascade = {

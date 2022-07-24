@@ -21,35 +21,35 @@ public class Client {
     @JsonFormat(pattern = "dd-MM-yyyy")
     private LocalDate birthDateClient;
 
-    public Integer getIdCliente() {
+    public Integer getIdClient() {
         return idClient;
     }
 
-    public void setIdCliente(Integer idCliente) {
+    public void setIdClient(Integer idCliente) {
         this.idClient = idCliente;
     }
 
-    public String getNameCliente() {
+    public String getNameClient() {
         return nameClient;
     }
 
-    public void setNameCliente(String nameCliente) {
+    public void setNameClient(String nameCliente) {
         this.nameClient = nameCliente;
     }
 
-    public String getEmailCliente() {
+    public String getEmailClient() {
         return emailClient;
     }
 
-    public void setEmailCliente(String emailCliente) {
+    public void setEmailClient(String emailCliente) {
         this.emailClient = emailCliente;
     }
 
-    public LocalDate getBirthDateCliente() {
+    public LocalDate getBirthDateClient() {
         return birthDateClient;
     }
 
-    public void setBirthDateCliente(LocalDate birthDateCliente) {
+    public void setBirthDateClient(LocalDate birthDateCliente) {
         this.birthDateClient = birthDateCliente;
     }
     @Override

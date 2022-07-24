@@ -42,9 +42,9 @@ public class ClientServiceImpl implements ClientService {
     public Client updateClient(Client client, Integer id) {
         Client existingClient = clientRepository.findById(id).orElseThrow(()-> new ResourceNotFoundException("Client","Id",id));
 
-        existingClient.setNameCliente(client.getNameCliente());
-        existingClient.setEmailCliente(client.getEmailCliente());
-        existingClient.setBirthDateCliente(client.getBirthDateCliente());
+        existingClient.setNameClient(client.getNameClient());
+        existingClient.setEmailClient(client.getEmailClient());
+        existingClient.setBirthDateClient(client.getBirthDateClient());
 
         clientRepository.save(existingClient);
         return existingClient;
